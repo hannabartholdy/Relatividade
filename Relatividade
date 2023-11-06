@@ -1,0 +1,26 @@
+import time
+import math
+# Definir a velocidade da luz em metros por segundo
+velocidade_da_luz = 299792458
+# Definir uma velocidade próxima à velocidade da luz
+velocidade_objeto = 0.9 * velocidade_da_luz
+# Definir o tempo observado por um observador em repouso
+tempo_repouso = 1  # segundos
+# Calcular o tempo dilatado para um observador em movimento
+tempo_dilatado = tempo_repouso / (1 - (velocidade_objeto**2 / velocidade_da_luz**2))**0.5
+# Simulação do efeito de dilatação do tempo
+print("Tempo observado no repouso:", tempo_repouso, "segundos")
+print("Tempo dilatado a velocidade próxima à da luz:", tempo_dilatado, "segundos")
+# Aguardar um segundo para simular a passagem do tempo
+time.sleep(1)
+# Simulação da contração do espaço
+comprimento_relativo = 1 / (1 - (velocidade_objeto**2 / velocidade_da_luz**2))**0.5
+# Simulação do efeito da relatividade das velocidades
+velocidade_relativa = (velocidade_objeto + velocidade_da_luz) / (1 + (velocidade_objeto * velocidade_da_luz / velocidade_da_luz**2))
+print("Comprimento relativo após a contração do espaço:", comprimento_relativo)
+print("Velocidade relativa a velocidade da luz:", velocidade_relativa / velocidade_da_luz)
+# Aguardar um segundo para simular a passagem do tempo
+time.sleep(1)
+# Simulação do tempo dilatado durante o sono
+tempo_dilatado_durante_sono = tempo_dilatado + 1
+print("Tempo dilatado após 1 segundo de sono:", tempo_dilatado_durante_sono, "segundos")
